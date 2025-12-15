@@ -102,7 +102,7 @@ nav{
 
 .header{
     position: absolute;
-    top: 48%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -115,16 +115,64 @@ nav{
 }
 
 .header__para{
-    width: 45%;
+    width: 450px;
     font-size: 24px;
     line-height: 2;
 }
+
+.socials{
+    display: flex;
+    margin-top: 10px;
+}
+
+.social__link{
+    text-decoration: none;
+    background-color: orange;
+    border-radius: 50%;
+    padding: 6px;
+    margin: 6px;
+}
+
+/* PROJECTS */
+
+#projects{
+    position: relative;
+}
+
+.project:after{
+    content: "";
+    height: 500px;
+    width: 80%;
+    position: absolute;
+    top:0;
+    left: 300px;
+    background-image: url("assets/google\ mockup.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.project__description{
+    position: absolute;
+    width: 550px;
+    bottom: -500px;
+    left: 380px;
+    z-index: 2;
+}
+
+.project:hover:after{
+    transform: scale(1.1);
+}
+
+.project__description:hover{
+    transform: translateY(100px);
+}
+
 
 @media (max-width: 768px){
     
     .header{
         position: absolute;
-        top: 44%;
+        top: 46%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
@@ -134,7 +182,7 @@ nav{
 
     .header__para{
         font-size: 20px;
-        width: 70%;
+        width: 450px;
     }
     
     .title{
@@ -162,7 +210,7 @@ nav{
 
     .header__para{
         font-size: 18px;
-        width: 80%;
+        width: 400px;
     }
     
 }
