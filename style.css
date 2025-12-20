@@ -119,6 +119,12 @@ nav{
     line-height: 2;
 }
 
+.title--secondary,
+.orange{
+    color: orange;
+    font-weight: bold;
+}
+
 .socials{
     display: flex;
     margin-top: 10px;
@@ -128,13 +134,14 @@ nav{
     text-decoration: none;
     background-color: orange;
     border-radius: 50%;
-    padding: 6px;
+    padding: 16px;
     margin: 6px;
     transition: all ease 300ms;
 }
 
 .social__link i{
     font-size: 16px;
+    color: white;
 }
 
 .social__link:hover{
@@ -145,6 +152,10 @@ nav{
 
 #projects{
     position: relative;
+}
+
+.project{
+    margin-bottom: 150px;
 }
 
 .project__img{
@@ -203,7 +214,7 @@ nav{
 }
 
 .project:hover .project__description--container{
-    transform: translateY(-400px);
+    transform: translateY(-350px);
     opacity: 1;
 }
 
@@ -211,7 +222,7 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 140px 0;
+    padding: 12% 0;
     background-color: #242424;
 }
 
@@ -287,6 +298,14 @@ nav{
         font-size: 70px;
     }
 
+    .project__description--container{
+        width: 80%;
+    }
+
+    .project:hover .project__description--container{
+        transform: translateY(-230px);
+        opacity: 1;
+    }
 }
 
 @media (max-width: 526px){
@@ -316,4 +335,7 @@ nav{
         width: 400px;
     }
     
+    .project__description{
+        display: none;
+    }
 }
