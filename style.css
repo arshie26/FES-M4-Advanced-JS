@@ -24,12 +24,21 @@ section{
     background-color: rgb(245, 245, 245);
 }
 
+p{
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
 /* NAVIGATION */
 
 nav{
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
+    padding: 0 20px;
     align-items: center;
     width: 100%;
     max-width: 1200px;
@@ -107,6 +116,7 @@ nav{
     width: 100%;
     max-width: 1000px;
     margin: 30px;
+    padding: 0 30px;
 }
 
 .title{
@@ -114,25 +124,24 @@ nav{
 }
 
 .header__para{
-    width: 450px;
+    max-width: 450px;
     font-size: 24px;
     line-height: 2;
 }
 
-.title--secondary,
 .orange{
     color: orange;
     font-weight: bold;
 }
 
-.socials{
+.social__list{
     display: flex;
-    margin-top: 10px;
+    margin-top: 16px;
 }
 
 .social__link{
-    text-decoration: none;
     background-color: orange;
+    color: white;
     border-radius: 50%;
     padding: 6px;
     margin: 6px;
@@ -141,11 +150,15 @@ nav{
 
 .social__link i{
     font-size: 16px;
-    color: white;
+    
 }
 
 .social__link:hover{
     transform: scale(1.1);
+}
+
+.social__link:click{
+    transform: scale(0.8);
 }
 
 /* PROJECTS */
