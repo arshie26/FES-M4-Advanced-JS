@@ -106,6 +106,7 @@ nav{
 
 #landing-page{
     min-height: 100vh;
+    position: relative;
 }
 
 .header{
@@ -159,6 +160,42 @@ nav{
 
 .social__link:click{
     transform: scale(0.8);
+}
+
+.scroll{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll__icon{
+    width: 20px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 24px;
+    position: relative;
+}
+
+.scroll__icon:after{
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    content: "";
+    width: 4px;
+    height: 6px;
+    background-color: #242424;
+    animation: scroll-bar 1000ms infinite alternate-reverse;
+}
+
+@keyframes scroll-bar {
+    0%{
+        transform: translateY(0px);
+    }
+
+    100%{
+        transform: translateY(6px);       
+    }
 }
 
 .mail__btn{
@@ -367,5 +404,9 @@ nav{
     
     .project__description{
         display: none;
+    }
+
+    .nav__link--mobile{
+        opacity: 0;
     }
 }
