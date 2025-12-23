@@ -131,15 +131,22 @@
                 </div>
             </div>
             <div class="modal__half modal__contact">
-                <h1>Let's have a chat!</h1>
-                <h6>I'm currenty open to new opportunities</h6>
-                <form>
-                    <label value="Name">Name</label>
-                    <input type="text">
-                    <label value="E-mail">Email</label>
-                    <input type="email">
-                    <label value="Message">Message</label>
-                    <input type="text">
+                <h3 class="modal__title modal__title--contact">Let's have a chat!</h1>
+                <h3 class="modal__sub-title modal__sub-title--contact">I'm currenty open to new opportunities</h6>
+                <form id="contact__form">
+                    <div class="form__item">
+                        <label class="form__item--label" value="Name">Name</label>
+                        <input class="input" type="text" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label" value="E-mail">Email</label>
+                        <input class="input" type="email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label" value="Message">Message</label>
+                        <textarea class="input" type="text" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit" type="submit">Send it my way</button>
                 </form>
             </div>
         </div>
