@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <script src="index.js"></script>
     <script src="https://kit.fontawesome.com/69b822bc74.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -148,6 +149,15 @@
                     </div>
                     <button id="contact__submit" class="form__submit" type="submit">Send it my way</button>
                 </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    <figure class="close__icon" onclick="closeMenu()">
+                        <i class="fas fa-times click"></i>
+                    </figure>
+                    Thanks for the message! Looking forward to speaking with you soon.
+                </div>
             </div>
         </div>
     </section>

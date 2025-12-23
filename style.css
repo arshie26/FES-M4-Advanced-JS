@@ -281,6 +281,7 @@ MODAL
 }
 
 .modal__half{
+    position: relative;
     width: 50%;
     padding: 40px 72px;
     display: flex;
@@ -389,6 +390,54 @@ MODAL
 .form__submit:active{
     border-color: #f06449;
     color: #f06449;
+}
+
+.modal__overlay{
+    position: absolute;
+    width: 101%;
+    height: 101%;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    color: white;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__overlay--loading{
+    background-color: #242424;
+    font-size: 80px;
+}
+
+.modal__overlay--success{
+    background-color: #4bb543;
+    text-align: center;
+    font-size: 40px;
+    padding: 28px;
+}
+
+.fa-spinner{
+    font-size: 80px;
+    animation: spinner 500ms infinite linear;
+}
+
+.close__icon{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+@keyframes spinner{
+    0%{
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 /* PROJECTS */
