@@ -280,7 +280,7 @@ MODAL
     display: flex;
     z-index: -1;
     visibility: hidden;
-    transition: visibility 1s, z-index 1s, box-shadow 0.5s;
+    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
 }
 
 .modal__open .modal{
