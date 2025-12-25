@@ -260,6 +260,22 @@ nav{
     transform: scale(1.1);
 }
 
+.navigation__bar,
+.scroll,
+.header{
+    opacity: 1;
+    visibility: visible;
+    transition: all 600ms 800ms;
+}
+
+.modal--open .navigation__bar,
+.modal--open .scroll,
+.modal--open .header{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 600ms;
+}
+
 /*
 
 MODAL
@@ -280,10 +296,10 @@ MODAL
     display: flex;
     z-index: -1;
     visibility: hidden;
-    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+    transition: visibility 0.2s, z-index 1s, box-shadow 0.5s ease;
 }
 
-.modal__open .modal{
+.modal--open .modal{
     visibility: visible;
     z-index: 1;
 }
@@ -295,11 +311,17 @@ MODAL
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: all 300ms ease-in;
+}
+
+.modal--open .modal__about,
+.modal--open .modal__contact{
+    transform: translateX(0%);
 }
 
 .modal__about{
     background-color: white;
-    
+    transform: translateX(-110%);
 }
 
 .modal__title{
@@ -365,6 +387,7 @@ MODAL
 .modal__contact{
     background-color: #242424;
     color: white;
+    transform: translateX(110%);
 }
 
 /*form{
@@ -409,7 +432,7 @@ MODAL
     transform: translate(-50%, -75%);
     color: white;
     opacity: 1;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: -1;
@@ -428,7 +451,8 @@ MODAL
 }
 
 .modal__overlay--visible{
-    z-index: 2;
+    z-index: 1;
+    display: flex;
 }
 
 .fa-spinner{
