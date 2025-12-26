@@ -38,6 +38,22 @@ a{
     text-decoration: none;
 }
 
+.mail__btn{
+    border-radius: 50%;
+    padding: 24px;
+    position: fixed;
+    z-index: 3;
+    top: 630px;
+    left: 1430px;
+    background-color: #242424;
+    color: white;
+    transition: all 300ms ease;
+}
+
+.mail__btn:hover{
+    transform: scale(1.1);
+}
+
 input, textarea{
     width: 100%;
     background-color: #242424;
@@ -69,6 +85,44 @@ input:hover, textarea:hover{
 
 input:focus, textarea:focus{
     border-color: #f06449;
+}
+
+/* 
+
+THEME TOGGLE
+
+*/
+
+.dark-theme section{
+    background-color: #242424;
+}
+
+.dark-theme .link__hover-effect--black:after{
+    background-color: white;
+}
+
+.dark-theme .title,
+.dark-theme .header__para,
+.dark-theme .nav__link--anchor,
+.dark-theme .section__title {
+    color: white;
+}
+
+.dark-theme .scroll__icon{
+    border-color: white;
+}
+
+.dark-theme .scroll__icon:after{
+    background-color: white;
+}
+
+.dark-theme .mail__btn{
+    background-color: white;
+    color: #242424;
+}
+
+.dark-theme #personal-logo{
+    filter:invert(0);
 }
 
 /* NAVIGATION */
@@ -137,7 +191,7 @@ nav{
 }
 
 .link__hover-effect--black:after{
-    background-color: black;
+    background-color: #242424;
 }
 
 .link__hover-effect--white:after{
@@ -178,7 +232,12 @@ nav{
 
 .orange{
     color: orange;
+}
+
+.title--secondary{
+    color: orange;
     font-weight: bold;
+    font-size: 120px;
 }
 
 .social__list{
@@ -218,7 +277,7 @@ nav{
 .scroll__icon{
     width: 20px;
     height: 30px;
-    border: 1px solid black;
+    border: 1px solid #242424;
     border-radius: 24px;
     position: relative;
 }
@@ -242,22 +301,6 @@ nav{
     100%{
         transform: translateY(6px);       
     }
-}
-
-.mail__btn{
-    border-radius: 50%;
-    padding: 24px;
-    position: fixed;
-    z-index: 3;
-    top: 630px;
-    left: 1430px;
-    background-color: black;
-    color: white;
-    transition: all 300ms ease;
-}
-
-.mail__btn:hover{
-    transform: scale(1.1);
 }
 
 .navigation__bar,
@@ -484,8 +527,13 @@ MODAL
     position: relative;
 }
 
+.section__title{
+    text-align: center;
+    font-size: 48px;
+}
+
 .project{
-    margin-bottom: 150px;
+    margin: 150px 0;
 }
 
 .project__img{

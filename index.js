@@ -32,6 +32,16 @@ function toggleModal(){
     document.body.classList += " modal--open";
 }
 
+
+let contrastToggle = false;
+function toggleTheme(){
+    contrastToggle = !contrastToggle;
+    if(contrastToggle){
+        return document.body.classList += "dark-theme";    
+    }    
+    document.body.classList.remove("dark-theme");
+}
+
 function closeMenu(){
     console.log("closemenu");
     const success = document.querySelector(".modal__overlay--success");
