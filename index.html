@@ -19,8 +19,7 @@
     </script>
 </head>
 <body>
-
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
         <nav class="navigation__bar">
             <figure class="logo__container">
                 <img id="personal-logo" src="./assets/logo.svg">
@@ -258,7 +257,7 @@
                     link__hover-effect
                     link__hover-effect--white
                     ">LinkedIn</a>
-                    <a class="
+                    <a onclick="toggleModal()" class="
                     footer__social--link
                     link__hover-effect
                     link__hover-effect--white
