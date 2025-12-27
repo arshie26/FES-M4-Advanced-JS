@@ -61,7 +61,7 @@
                 <h1 class="title">Hey</h1>
                 <h1 class="title--secondary">I'm David</h1>
                 <p class="header__para">I'm a <span class="orange">Frontend Software Engineer</span> with a strong passion for building web applications with great user experiences.</p>
-                <p class="header__para">Here's a bit more <a onclick="toggleModal()">about me</a></p>
+                <p class="header__para">Here's a bit more <a onclick="toggleModal()" class="orange">about me</a></p>
                 <div class="social__list">
                     <a href="" class="social__link">
                         <i class="fa-brands fa-linkedin-in"></i>
@@ -75,13 +75,15 @@
                 </div>
             </div>
         </header>
-        <a class="scroll">
+        <a class="scroll" href="#projects">
             <div class="scroll__icon click">
             </div>
         </a>
-        <button class="mail__btn" onclick="toggleModal()">
-            <i class="fas fa-envelope"></i>
-        </button>
+        <a href="#">
+            <button class="mail__btn" onclick="toggleModal()">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </a>
         <div class="modal">
             <div class="modal__half modal__about">
                 <h1 class="modal__title">Here's a bit about me.</h1>
@@ -243,9 +245,11 @@
     <footer>
         <div class="container">
             <div class="row footer__row">
-                <figure class="logo__container footer">
-                    <img id="personal-logo-footer" src="./assets/logo.svg">
-                </figure>
+                <a href="#">
+                    <figure class="logo__container footer">
+                        <img id="personal-logo-footer" src="./assets/logo.svg">
+                    </figure>
+                </a>
                 <div class="footer__links">
                     <a class="
                     footer__social--link
@@ -257,7 +261,7 @@
                     link__hover-effect
                     link__hover-effect--white
                     ">LinkedIn</a>
-                    <a onclick="toggleModal()" class="
+                    <a onclick="toggleModal()" href="#" class="
                     footer__social--link
                     link__hover-effect
                     link__hover-effect--white

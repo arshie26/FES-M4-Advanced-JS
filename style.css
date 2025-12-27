@@ -9,6 +9,10 @@
 
 /* GENERICS */
 
+html{
+    scroll-behavior: smooth;
+}
+
 .container{
     padding: 50px 0;
     width: 100%;
@@ -36,6 +40,7 @@ p{
 
 a{
     text-decoration: none;
+    cursor: pointer;
 }
 
 .mail__btn{
@@ -222,12 +227,7 @@ nav{
 
 .title{
     font-size: 120px;
-}
-
-.header__para{
-    max-width: 450px;
-    font-size: 24px;
-    line-height: 2;
+    animation: title-fadeup 650ms 400ms backwards;
 }
 
 .orange{
@@ -238,11 +238,33 @@ nav{
     color: orange;
     font-weight: bold;
     font-size: 120px;
+    animation: title-fadeup 650ms 600ms backwards;
+}
+
+
+.header__para{
+    max-width: 450px;
+    font-size: 24px;
+    line-height: 2;
+    animation: title-fadeup 650ms 800ms backwards;
+}
+
+@keyframes title-fadeup {
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .social__list{
     display: flex;
     margin-top: 16px;
+    animation: title-fadeup 650ms 1s backwards;
 }
 
 .social__link{
@@ -629,6 +651,24 @@ footer{
 .logo__container.footer{
     width: auto;
     margin-left: 0;
+    position: relative;
+}
+
+.logo__container.footer:after{
+    position: absolute;
+    content: "Top";
+    right: 0;
+    top: 20%;
+    color: white;
+    opacity: 0;
+    transition: all 300ms ease;
+    font-weight: bold;
+}
+
+.logo__container.footer:hover:after{
+    right: -90%;
+    opacity: 1;
+    
 }
 
 #personal-logo-footer{
